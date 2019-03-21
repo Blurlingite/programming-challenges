@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<head>
+  <title>Javascript Practice</title>
+</head>
+
+<script>
+
+
+function myFunction() {
+
+var A = [-2,-3,-6,-4,-1,-8];
+
+var arr2 = [];
+
+var lowestNum = 0;
+
+var missingNum = 0;
+
+
+// first remove all negative numbers and zeros
+for(var q = 0; q < A.length; q++){
+
+  if(A[q] < 0 || A[q] == 0){
+    A.splice(q,1);
+  }
+
+}
+
+
+
+// sort the array
+while(A.length != 0){
+
+  var firstElement = A[0];
+
+  var indexToSplice;
+
+
+  for(var i = 0; i < A.length; i++){
+
+      if(A[i] <= firstElement && A[i] > 0){
+        lowestNum = A[i];
+        indexToSplice = i;
+      }
+
+
+
+  }
+
+  arr2.push(lowestNum)
+  A.splice(indexToSplice, 1);
+
+
+}
+
+
+
+// look for missing number
+
+for(var i = 0; i < arr2.length; i++){
+
+// if 1 is not the first number, it is the missing number
+  if(arr2[0] != 1){
+    missingNum = 1;
+    break;
+  }
+
+  var currentNum = arr2[i];
+  var nextNum = arr2[i+1];
+// if the difference between the next number and the current number is
+// not 1 and is not 0, and the next number is not undefined (because of adding 1 to the index in nextNum)
+// the missing number is the current number + 1
+  if(nextNum - currentNum != 1 && nextNum - currentNum != 0 && nextNum != undefined){
+    missingNum = currentNum + 1;
+  }
+
+  if(missingNum == 0){
+    missingNum = arr2[arr2.length - 1] + 1;
+  }
+
+}
+
+
+
+
+alert(missingNum);
+
+
+
+
+// end
+
+}
+</script>
+
+<body>
+
+<p id = "demo">
+  HHHHHH
+  </p>
+
+  <button type="button" onclick="myFunction()">Click Me!</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src = "js/home.js"></script>
+</body>
+
+
+
+
+</html>

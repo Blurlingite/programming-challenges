@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+  <title>Javascript Practice</title>
+</head>
+
+<script>
+
+
+function myFunction() {
+
+var A = [2,-3,0,-4,-1,8];
+
+var arr2 = [];
+
+// need -4,-3,-1,0,2,8
+
+
+
+// sort the array
+while(A.length != 0){
+
+  var lowestNum = A[0];
+
+  var indexToSplice;
+
+// go through the array until you find the lowest number
+  for(var i = 0; i < A.length; i++){
+
+      if(A[i] <= lowestNum){
+        lowestNum = A[i];
+
+        // get the index of the lowest number so you can remove it by index later
+        indexToSplice = i;
+      }
+
+
+
+  }
+
+// after the for loop concludes, you'll have the lowest number, so push it to the new array
+  arr2.push(lowestNum)
+
+  // also remove the lowest number from the original array so that when
+  // we go back to the while loop, which executes the for loop again,
+  // we will get the next lowest number
+  A.splice(indexToSplice, 1);
+
+
+}
+
+
+
+alert(arr2);
+
+
+
+
+// end
+
+}
+</script>
+
+<body>
+
+<p id = "demo">
+  HHHHHH
+  </p>
+
+  <button type="button" onclick="myFunction()">Click Me!</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src = "js/home.js"></script>
+</body>
+
+
+
+
+</html>
