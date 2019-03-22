@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+  <title>Javascript Practice</title>
+</head>
+
+<!-- OBJECTIVE:  Make an array with a sum of all it's elements 0 given a number N -->
+<script>
+
+
+function myFunction() {
+
+  var N = 6;
+
+  var x = N;
+  var negativeNum = N * -1;
+
+  var numToAdd;
+  var negNumToAdd;
+
+  var arr = [];
+
+
+
+
+
+  arr.push(N);
+  arr.push(negativeNum);
+
+// n = 3
+  N = N - 2;
+
+  if(N != 0 && N != 1){
+
+    for(var i = 0; i < N; i++){
+      numToAdd = i + 1;
+      negNumToAdd = numToAdd * -1;
+
+      arr.push(numToAdd);
+      i++;
+
+      if(i > N){
+        break;
+      }
+      arr.push(negNumToAdd);
+      i++;
+
+      if(i > N){
+        break;
+      }
+    }
+
+
+
+  if(arr.length < x){
+    arr.push(0);
+  }
+
+}else if(N == 1){
+  arr.push(0);
+}
+
+
+
+
+
+
+alert(arr);
+
+
+// end
+
+}
+</script>
+
+<body>
+
+<p id = "demo">
+  HHHHHH
+  </p>
+
+  <button type="button" onclick="myFunction()">Click Me!</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src = "js/home.js"></script>
+</body>
+
+
+
+
+</html>
