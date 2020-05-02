@@ -1,0 +1,22 @@
+{
+  "name": "programming-challenges",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Javascript",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Blurlingite/programming-challenges.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Blurlingite/programming-challenges/issues"
+  },
+  "homepage": "https://github.com/Blurlingite/programming-challenges#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
+}

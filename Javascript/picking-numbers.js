@@ -4,7 +4,6 @@
 // subarrays meeting the criterion: [1,1,2,2] and [4,4,5,5,5].The maximum length subarray has 5 elements.
 
 let a = [4, 6, 5, 3, 3, 1];
-
 let b = [];
 let bCounter = 0;
 let currentNum;
